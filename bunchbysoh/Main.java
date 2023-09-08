@@ -11,7 +11,7 @@ public class Main {
     CountsBySoH counts = new CountsBySoH();
     
     for(int capacity : presentCapacities){
-      int sohPercentage = (capacity * 100.0) / 120.0; // soh calculation
+      double sohPercentage = (capacity * 100.0) / 120.0; // soh calculation
       
       //to check SoH of batteries
       if(sohPercentage > 80){
