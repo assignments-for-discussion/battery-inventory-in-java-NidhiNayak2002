@@ -46,8 +46,8 @@ public class Main {
     
     int[] presentCapacities = {115, 118, 80, 95, 91, 77};//test case 1
     CountsBySoH counts = countBatteriesByHealth(presentCapacities);
-    assert(counts.healthy == 2);
-    assert(counts.exchange == 3);
+    assert(counts.healthy == 3);
+    assert(counts.exchange == 2);
     assert(counts.failed == 1);
 
     int[] presentCapacities1 = {};//test case 2
