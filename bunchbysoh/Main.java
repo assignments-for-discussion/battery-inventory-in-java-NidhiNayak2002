@@ -13,13 +13,13 @@ public class Main {
       int soh = calculateSoh(presentCap);
       String classification = classifyBattery(soh);
       if(classification.equals("Healthy")){
-        counts.healthy+=1;
+        counts.healthy++;
       }
       else if(classification.equals("Exchange")){
-        counts.exchange+=1;
+        counts.exchange++;
       }
       else{
-        counts.failed+=1;
+        counts.failed++;
       }
     }
     return counts;
