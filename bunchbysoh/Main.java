@@ -45,10 +45,10 @@ public class Main {
     System.out.println("Counting batteries by SoH...\n");
     
     int[] presentCapacities = {115, 118, 80, 109, 91, 77};//test case 1
-    CountsBySoH counts = countBatteriesByHealth(presentCapacities);
-    assert(counts.healthy == 3);
-    assert(counts.exchange == 2);
-    assert(counts.failed == 1);
+    CountsBySoH counts1 = countBatteriesByHealth(presentCapacities);
+    assert(counts1.healthy == 3);
+    assert(counts1.exchange == 2);
+    assert(counts1.failed == 1);
 
     int[] presentCapacities1 = {};//test case 2
     CountsBySoH counts2 = countBatteriesByHealth(presentCapacities1);
