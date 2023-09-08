@@ -11,12 +11,36 @@ public class Main {
     CountsBySoH counts = new CountsBySoH();
     for(int presentCap : presentCapacities){
       int soh = calculateSoh(presentCap);
+      String classification = classifyBattery(soh);
+      if(classification == "Healthy"){
+        counts.healthy+=1;
+      }
+      else if(classification == "Exchange"){
+        counts.exchange+=1;
+      }
+      else{
+        counts.failed+=1;
+      }
     }
     return counts;
   }
+  
   public static int calculateSoh(int presentCap){
     return (presentCap/120)*100;
   }
+  
+  public static String classifyBattery(int soh){
+    if(soh>80 && soh<=100){
+      return "Healthy";
+    }
+    else if(soh>=65 && soh<=80){
+      return "Exchange";
+    }
+    else{
+      return "Failed";
+    }
+  }
+  
   static void testBucketingByHealth() {
     System.out.println("Counting batteries by SoH...\n");
     int[] presentCapacities = {115, 118, 80, 95, 91, 77};
