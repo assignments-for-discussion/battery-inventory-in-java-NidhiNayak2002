@@ -44,7 +44,7 @@ public class Main {
   public static void main(String[] args) {
     System.out.println("Counting batteries by SoH...\n");
     
-    int[] presentCapacities = {115, 118, 80, 95, 91, 77};//test case 1
+    int[] presentCapacities = {115, 118, 80, 109, 91, 77};//test case 1
     CountsBySoH counts = countBatteriesByHealth(presentCapacities);
     assert(counts.healthy == 3);
     assert(counts.exchange == 2);
