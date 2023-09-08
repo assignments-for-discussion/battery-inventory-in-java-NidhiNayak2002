@@ -9,9 +9,14 @@ public class Main {
 
   static CountsBySoH countBatteriesByHealth(int[] presentCapacities) {
     CountsBySoH counts = new CountsBySoH();
+    for(int presentCap : presentCapacities){
+      int soh = calculateSoh(presentCap);
+    }
     return counts;
   }
-
+  public static int calculateSoh(int presentCap){
+    return (presentCap/120)*100;
+  }
   static void testBucketingByHealth() {
     System.out.println("Counting batteries by SoH...\n");
     int[] presentCapacities = {115, 118, 80, 95, 91, 77};
