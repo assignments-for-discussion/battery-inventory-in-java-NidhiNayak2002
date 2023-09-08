@@ -41,13 +41,13 @@ public class Main {
     }
   }
   
-   static void testBucketingByHealth() {
+   public static void main(String[] args) {
     System.out.println("Counting batteries by SoH...\n");
     
-    int[] presentCapacities = {115, 118, 80, 109, 91, 77};//test case 1
+    int[] presentCapacities = {115, 118, 80, 95, 91, 77};//test case 1
     CountsBySoH counts1 = countBatteriesByHealth(presentCapacities);
-    assert(counts1.healthy == 3);
-    assert(counts1.exchange == 2);
+    assert(counts1.healthy == 2);
+    assert(counts1.exchange == 3);
     assert(counts1.failed == 1);
 
     int[] presentCapacities1 = {};//test case 2
@@ -65,7 +65,5 @@ public class Main {
     System.out.println("Done counting :)\n");
     return 0;
   }
-  public static void main(String[] args) {
-    testBucketingByHealth();
-  }
+   
 }
