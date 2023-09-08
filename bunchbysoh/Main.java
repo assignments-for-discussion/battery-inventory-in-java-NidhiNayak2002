@@ -39,7 +39,7 @@ public class Main {
     else{
       return "Failed";
     }
-    return counts;
+    
   }
   
    public static void main(String[] args) {
