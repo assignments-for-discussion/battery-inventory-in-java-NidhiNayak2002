@@ -30,15 +30,16 @@ public class Main {
   }
   
   public static String classifyBattery(int soh){//checks and returns the battery status
-    if(soh>80 && soh<=100){
+    if(soh>80){
       return "Healthy";
     }
-    else if(soh>=65 && soh<=80){
+    else if(soh>=65 ){
       return "Exchange";
     }
     else{
       return "Failed";
     }
+    return counts;
   }
   
    public static void main(String[] args) {
