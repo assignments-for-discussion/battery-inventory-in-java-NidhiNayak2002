@@ -12,10 +12,10 @@ public class Main {
     for(int presentCap : presentCapacities){
       int soh = calculateSoh(presentCap);
       String classification = classifyBattery(soh);
-      if(classification == "Healthy"){
+      if(classification.equals("Healthy")){
         counts.healthy+=1;
       }
-      else if(classification == "Exchange"){
+      else if(classification.equals("Exchange")){
         counts.exchange+=1;
       }
       else{
