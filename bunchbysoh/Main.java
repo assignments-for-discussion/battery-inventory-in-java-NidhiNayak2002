@@ -41,7 +41,7 @@ public class Main {
     }
   }
   
-  static void testBucketingByHealth() {
+  public static void main(String[] args) {
     System.out.println("Counting batteries by SoH...\n");
     int[] presentCapacities = {115, 118, 80, 95, 91, 77};//test case 1
     CountsBySoH counts1 = countBatteriesByHealth(presentCapacities);
@@ -62,9 +62,5 @@ public class Main {
     assert(counts3.failed == 0);
     
     System.out.println("Done counting :)\n");
-  }
-
-  public static void main(String[] args) {
-    testBucketingByHealth();
   }
 }
