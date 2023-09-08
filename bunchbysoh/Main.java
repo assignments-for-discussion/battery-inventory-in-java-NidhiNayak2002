@@ -63,6 +63,7 @@ public class Main {
     assert(counts3.failed == 5);
     
     System.out.println("Done counting :)\n");
+    return 0;
   }
   public static void main(String[] args) {
     testBucketingByHealth();
